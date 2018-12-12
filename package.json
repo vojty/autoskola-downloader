@@ -1,0 +1,24 @@
+{
+  "name": "autoskola-downloader",
+  "author": "Tomáš Vojtášek <vojtasek.tomas@seznam.cz>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "fs-extra": "^7.0.0",
+    "inquirer": "^6.2.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.3"
+  }
+}
