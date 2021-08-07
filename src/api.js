@@ -1,6 +1,6 @@
 const rp = require('request-promise')
 
-const BASE_URL = 'http://etesty2.mdcr.cz'
+const BASE_URL = 'https://etesty2.mdcr.cz'
 const LECTURE_URL = `${BASE_URL}/Test/GeneratePractise/`
 const QUESTION_URL = `${BASE_URL}/Test/RenderQuestion`
 
