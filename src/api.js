@@ -1,37 +1,21 @@
-const rp = require('request-promise')
+const { default: axios } = require('axios')
 
 const BASE_URL = 'https://etesty2.mdcr.cz'
 const LECTURE_URL = `${BASE_URL}/Test/GeneratePractise/`
 const QUESTION_URL = `${BASE_URL}/Test/RenderQuestion`
 
 function fetchQuestion(id) {
-  return rp({
-    uri: QUESTION_URL,
-    method: 'POST',
-    body: {
-      id
-    },
-    json: true
-  })
+  return axios.post(QUESTION_URL, { id }).then(res => res.data)
 }
 
 function fetchLecture(id) {
-  return rp({
-    uri: LECTURE_URL,
-    method: 'POST',
-    body: {
-      lectureID: id
-    },
-    json: true
-  })
+  return axios.post(LECTURE_URL, { lectureID: id }).then(res => res.data)
 }
 
 function fetchAsset(assetUrl) {
   const url = `${BASE_URL}${assetUrl}`
-  return rp({
-    url,
-    encoding: null,
-    resolveWithFullResponse: true
+  return axios.get(url, {
+    responseType: 'arraybuffer'
   })
 }
 

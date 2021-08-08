@@ -7,11 +7,10 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "fs-extra": "^7.0.0",
-    "inquirer": "^6.2.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.2"
   },
   "devDependencies": {
     "eslint": "^5.10.0",

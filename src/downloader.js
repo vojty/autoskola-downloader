@@ -7,22 +7,15 @@ const { parseQuestionHtml, serialResolve } = require('./utils')
 
 const DATA_DIR = path.join(__dirname, '../data')
 
-function downloadImage(lectureDir, imageUrl, name) {
-  return fetchAsset(imageUrl).then(res => {
-    const contentType = res.headers['content-type']
-    const ext = contentType.replace(/image\/\.?/, '')
-    const filename = `${name}.${ext}`
-    fs.writeFileSync(path.join(lectureDir, filename), res.body)
-    return { filename, contentType }
-  })
-}
-
-function downloadVideo(lectureDir, videoUrl, name) {
+function downloadAsset(lectureDir, videoUrl, name) {
   return fetchAsset(videoUrl).then(res => {
     const contentType = res.headers['content-type']
-    const ext = contentType.replace(/video\/\.?/, '')
+    const ext = contentType.replace(/(video|image)\/\.?/, '')
     const filename = `${name}.${ext}`
-    fs.writeFileSync(path.join(lectureDir, filename), res.body)
+    fs.writeFileSync(
+      path.join(lectureDir, filename),
+      Buffer.from(res.data, 'binary')
+    )
     return { filename, contentType }
   })
 }
@@ -49,12 +42,12 @@ function downloadLecture(lecture) {
           )
 
           const assetPromiseFactories = imageUrls.map((imageUrl, index) => () =>
-            downloadImage(lectureDir, imageUrl, `${id}-${index + 1}`)
+            downloadAsset(lectureDir, imageUrl, `${id}-${index + 1}`)
           )
 
           if (videoUrl) {
             assetPromiseFactories.push(() =>
-              downloadVideo(lectureDir, videoUrl, `${id}-${imageUrls + 1}`)
+              downloadAsset(lectureDir, videoUrl, `${id}-${imageUrls + 1}`)
             )
           }
 
