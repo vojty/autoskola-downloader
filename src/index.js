@@ -10,18 +10,16 @@ inquirer
       type: 'checkbox',
       message: 'Select lectures to download',
       name: 'lectures',
-      choices: lectures.map(lecture => ({
+      choices: lectures.map((lecture) => ({
         name: lecture.name,
         value: lecture
       }))
     }
   ])
-  .then(results => {
-    const promiseFns = results.lectures.map(lecture => () =>
-      downloadLecture(lecture)
-    )
+  .then((results) => {
+    const promiseFns = results.lectures.map((lecture) => () => downloadLecture(lecture))
     return serialResolve(promiseFns)
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err)
   })

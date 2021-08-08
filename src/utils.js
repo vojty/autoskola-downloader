@@ -11,18 +11,14 @@ function parseQuestionHtml(html) {
     .map((i, image) => $(image).attr('src'))
     .get()
     .map(
-      url => escape(url) // special chars in url :/
+      (url) => escape(url) // special chars in url :/
     )
 
   const videoUrl = $('.image-frame source').attr('src')
   const answers = $('.answer')
     .map((i, answer) => ({
       id: $(answer).data('answerid'),
-      text: sanitize(
-        $(answer)
-          .find('p')
-          .text()
-      )
+      text: sanitize($(answer).find('p').text())
     }))
     .get()
   return {
@@ -36,9 +32,7 @@ function parseQuestionHtml(html) {
 function serialResolve(factoryFns) {
   return factoryFns.reduce(
     (promiseChain, factory) =>
-      promiseChain.then(chainResults =>
-        factory().then(currentResult => [...chainResults, currentResult])
-      ),
+      promiseChain.then((chainResults) => factory().then((currentResult) => [...chainResults, currentResult])),
     Promise.resolve([])
   )
 }
