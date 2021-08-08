@@ -2,11 +2,11 @@
 
 CLI udělátko na stažení otázek z webu http://etesty2.mdcr.cz/
 
-Funkční k 12.12.2018 - _Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2_ (z patičky webu)
+Funkční k 08.08.2021 - _Verze aplikace: 1.0.19.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2_ (z patičky webu)
 
 ## K čemu to je
 K vytvoření vlastní aplikace na procvičování otázek do autoškoly, která bude narozdíl od etesty2:
-- fungovat na iOS (flash -> gif)
+- ~~fungovat na iOS (flash -> gif)~~ etesty už používají mp4 video
 - fungovat responzivně
 - fungovat offline
 
@@ -18,10 +18,10 @@ yarn install --pure-lockfile
 yarn start
 ```
 
-Po vybrání požadovaných oblastí se do `data/lecture-<id>` uloží soubor `data.json` se seznamem otázek spolu se všemi potřebnými obrázky. Flash soubory jsou ihned po stažení automaticky konvertovány do GIF - **je potřeba mít v PATH program ffmpeg**
+Po vybrání požadovaných oblastí se do `data/lecture-<id>` uloží soubor `data.json` se seznamem otázek spolu se všemi potřebnými obrázky a videi.
 
 Náhled souboru:
-```js
+```json
 [
   {
     "id": 2362,
@@ -44,7 +44,7 @@ Náhled souboru:
         "text": "Může, pokud je přepravované osobě více než 12 let."
       }
     ],
-    "images": []
+    "assets": []
   },
   ...
 ]

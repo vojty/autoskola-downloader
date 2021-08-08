@@ -26,17 +26,8 @@ function fetchLecture(id) {
   })
 }
 
-function fetchImage(imageUrl) {
-  const url = `${BASE_URL}${imageUrl}`
-  return rp({
-    url,
-    encoding: null,
-    resolveWithFullResponse: true
-  })
-}
-
-function fetchFlash(flashUrl) {
-  const url = `${BASE_URL}${flashUrl}`
+function fetchAsset(assetUrl) {
+  const url = `${BASE_URL}${assetUrl}`
   return rp({
     url,
     encoding: null,
@@ -47,6 +38,5 @@ function fetchFlash(flashUrl) {
 module.exports = {
   fetchLecture,
   fetchQuestion,
-  fetchImage,
-  fetchFlash
+  fetchAsset
 }

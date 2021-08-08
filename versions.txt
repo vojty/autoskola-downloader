@@ -1,3 +1,4 @@
-15.08. Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
-02.10. Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
-12.12. Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
+08.08.2021 Verze aplikace: 1.0.19.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
+12.12.2018 Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
+02.10.2018 Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2
+15.08.2018 Verze aplikace: 1.0.18.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2

@@ -14,7 +14,7 @@ function parseQuestionHtml(html) {
       url => escape(url) // special chars in url :/
     )
 
-  const flashUrl = $('object').attr('data')
+  const videoUrl = $('.image-frame source').attr('src')
   const answers = $('.answer')
     .map((i, answer) => ({
       id: $(answer).data('answerid'),
@@ -28,7 +28,7 @@ function parseQuestionHtml(html) {
   return {
     text: sanitize(text),
     imageUrls,
-    flashUrl,
+    videoUrl,
     answers
   }
 }
