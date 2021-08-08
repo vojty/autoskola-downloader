@@ -13,7 +13,7 @@ function downloadImage(lectureDir, imageUrl, name) {
     const ext = contentType.replace(/image\/\.?/, '')
     const filename = `${name}.${ext}`
     fs.writeFileSync(path.join(lectureDir, filename), res.body)
-    return filename
+    return { filename, contentType }
   })
 }
 
@@ -23,7 +23,7 @@ function downloadVideo(lectureDir, videoUrl, name) {
     const ext = contentType.replace(/video\/\.?/, '')
     const filename = `${name}.${ext}`
     fs.writeFileSync(path.join(lectureDir, filename), res.body)
-    return filename
+    return { filename, contentType }
   })
 }
 

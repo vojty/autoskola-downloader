@@ -24,28 +24,33 @@ Náhled souboru:
 ```json
 [
   {
-    "id": 2362,
-    "text": "Může řidič motocyklu přepravovat osobu, která nedosáhne nohama na stupačky?",
-    "code": "06050445",
+    "id": 1604,
+    "text": "Jak se zachováte v místě, kde je tato výstražná dopravní značka?",
+    "code": "06040193",
     "correctAnswers": [
-      23279
+      14813
     ],
     "answers": [
       {
-        "id": 23278,
-        "text": "Ano, ale jen v obci."
+        "id": 14812,
+        "text": "Nezměním způsob jízdy ani chování, protože není důvod očekávat změnu dopravní situace."
       },
       {
-        "id": 23279,
-        "text": "Nesmí."
+        "id": 14813,
+        "text": "Přizpůsobím jízdu tomu, že se vozovka oproti předcházejícímu úseku výrazně zužuje, a to z obou stran"
       },
       {
-        "id": 23280,
-        "text": "Může, pokud je přepravované osobě více než 12 let."
+        "id": 14814,
+        "text": "Zvýším rychlost jízdy, abych byl co nejrychleji z místa zúžení."
       }
     ],
-    "assets": []
-  },
+    "assets": [
+      {
+        "filename": "1604-1.jpg",
+        "contentType": "image/jpg"
+      }
+    ]
+  }
   ...
 ]
 ```
