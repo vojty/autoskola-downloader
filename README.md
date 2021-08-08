@@ -1,6 +1,6 @@
 # Autoškola downloader
 
-CLI udělátko na stažení otázek z webu http://etesty2.mdcr.cz/
+CLI udělátko na stažení otázek z webu https://etesty2.mdcr.cz/
 
 Funkční k 08.08.2021 - _Verze aplikace: 1.0.19.4 PROD-SQL1\SQL1/eKomunikace_PRODUKCE2_ (z patičky webu)
 
